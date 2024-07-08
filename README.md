@@ -1,5 +1,5 @@
-an experimental routine to calculate nutrient limitation in PlankTOM12 models
-as of 2024-07 iron subroutine not implemented
+- an experimental routine to calculate nutrient limitation in PlankTOM12 models
+- as of 2024-07 iron subroutine not implemented
 
 help for main subroutine:
 

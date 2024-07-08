@@ -1,15 +1,15 @@
 an experimental routine to calculate nutrient limitation in PlankTOM12 models
-
+as of 2024-07 iron subroutine not implemented
 
 help for main subroutine:
 
- written by TJŠJ at UEA, 2024, T.Jarnikova@uea.ac.uk
-    based on RIV12/NEMO/TOP_SRC/PlankTOM/bgcpro.F90, written by ET
+    written by TJŠJ at UEA, 2024, T.Jarnikova [a] uea.ac.uk
+    based on /gpfs/home/avd22gnu/scratch/modelTest/RIV12/NEMO/TOP_SRC/PlankTOM/bgcpro.F90 (by OA and ET) 
     
     calculates limiting nutrient from ptrc outputs for a given model, year, phytoplankton functional type, and namelist.trc.sms. 
     saves as: {WhereToSave}/{modelName}_y{year}_{pPFT}_LoP.nc
     saves both limiting nutrient (1 = NO3, 2 = Si, 3 = PO4, 4 = Fe) and value of nutrient limitation (0-1)
-
+    
     arguments:
     trcsmsPath 
         path to namelist.trc.sms. eg '/gpfs/home/mep22dku/scratch/ModelRuns/TOM12_TJ_R4A0/namelist.trc.sms'

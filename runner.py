@@ -14,23 +14,27 @@ import LimitsOfPhytoplankton as LoP
 
 
 trcsmsPath = '/gpfs/home/mep22dku/scratch/ModelRuns/TOM12_TJ_R4A0/namelist.trc.sms'
-modelName =  'TOM12_TJ_R4A1'
+
 year = 2023
 ModelDirectory = '/gpfs/data/greenocean/software/runs/'
 whereToSave = '/gpfs/home/mep22dku/scratch/LimitsOfPhytoplankton/data/'
 verbose = True
-dlim = 1 #just surface
-
-#DIA MIX CO    PIC     PHA     FIX 
-# pPFT = 'DIA'
-# LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = 1)
-# pPFT = 'MIX'
-# LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = 1)
-# pPFT = 'COC'
-# LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = 1)
-# pPFT = 'PIC'
-# LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = 1)
-# pPFT = 'PHA'
-# LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = 1)
-pPFT = 'FIX'
-LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = 1)
+dlim = 10 #just surface
+modelName =  'TOM12_TJ_CA02'
+for year in range(1950,2100):
+    #DIA MIX CO    PIC     PHA     FIX 
+    pPFT = 'DIA'
+    LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = dlim)
+    pPFT = 'MIX'
+    LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = dlim)
+    pPFT = 'FIX'
+    LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = dlim)
+modelName =  'TOM12_TJ_EA02'
+for year in range(1950,2100):
+    #DIA MIX CO    PIC     PHA     FIX 
+    pPFT = 'DIA'
+    LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = dlim)
+    pPFT = 'MIX'
+    LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = dlim)
+    pPFT = 'FIX'
+    LoP.GetLimitsOfPhytoplankton(trcsmsPath,modelName,year,pPFT, verbose = True, dlim = dlim)
